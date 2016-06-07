@@ -21,6 +21,8 @@ import javax.swing.JFrame;
  */
 public class MainView extends FrameView {
 
+    private String[][] transactionInfo;
+
     public MainView(SingleFrameApplication app) {
         super(app);
 
@@ -91,6 +93,7 @@ public class MainView extends FrameView {
         Main.getApplication().show(aboutBox);
     }
 
+
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -150,6 +153,11 @@ public class MainView extends FrameView {
 
         browseImportBtn.setText(resourceMap.getString("browseImportBtn.text")); // NOI18N
         browseImportBtn.setName("browseImportBtn"); // NOI18N
+        browseImportBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                browseImportBtnActionPerformed(evt);
+            }
+        });
 
         downloadBtn.setText(resourceMap.getString("downloadBtn.text")); // NOI18N
         downloadBtn.setName("downloadBtn"); // NOI18N
@@ -403,6 +411,30 @@ public class MainView extends FrameView {
         setMenuBar(menuBar);
         setStatusBar(statusPanel);
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * Will browse for file to import.
+     * @param evt When browse button is clicked
+     */
+    private void browseImportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseImportBtnActionPerformed
+        fileImport(); // Imports the file from users computer.
+    }//GEN-LAST:event_browseImportBtnActionPerformed
+
+    /**
+     * Import and Parse CSV from users computer.
+     */
+    public void fileImport() {
+        
+    }
+
+    /**
+     * Checks if given String is numeric
+     * @param str The string given
+     * @return True if the value of the string is numeric.
+     */
+    public boolean isNumeric(String str) {
+        return str.matches("^(0|[1-9][0-9]*)$");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton CSVRadioOption;
