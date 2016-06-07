@@ -11,10 +11,15 @@ import org.jdesktop.application.FrameView;
 import org.jdesktop.application.TaskMonitor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileFilter;
 import javax.swing.Timer;
 import javax.swing.Icon;
 import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  * The application's main frame.
@@ -424,7 +429,22 @@ public class MainView extends FrameView {
      * Import and Parse CSV from users computer.
      */
     public void fileImport() {
-        
+        JFileChooser fc = new JFileChooser();
+        fc.setAcceptAllFileFilterUsed(false);
+        fc.addChoosableFileFilter(new FileNameExtensionFilter("CSV File","csv"));
+        int returnVal = fc.showDialog(null, "Find CSV File");
+        File csvFile = null; // Init.
+
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            csvFile = fc.getSelectedFile();
+        } else {
+            JOptionPane.showMessageDialog(null, "Error: No file Selected!");
+        }
+        transactionInfo = parseCSV(csvFile);
+    }
+
+    public String[][] parseCSV(File CSV) {
+        return null;
     }
 
     /**
