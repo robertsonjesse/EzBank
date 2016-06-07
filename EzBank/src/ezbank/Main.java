@@ -8,7 +8,8 @@ import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
 /**
- * The main class of the application.
+ * Start App
+ * @version 1.0
  */
 public class Main extends SingleFrameApplication {
 

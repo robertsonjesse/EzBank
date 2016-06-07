@@ -101,6 +101,31 @@ public class MainView extends FrameView {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        importLbl = new javax.swing.JLabel();
+        importPathField = new javax.swing.JTextField();
+        browseImportBtn = new javax.swing.JButton();
+        downloadBtn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        idTextArea = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        dateTextArea = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        descTextArea = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        creditsTextArea = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        debitsTextArea = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        searchField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        seachBtn = new javax.swing.JButton();
+        exportBtn = new javax.swing.JButton();
+        textRadioOption = new javax.swing.JRadioButton();
+        CSVRadioOption = new javax.swing.JRadioButton();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -111,23 +136,213 @@ public class MainView extends FrameView {
         statusMessageLabel = new javax.swing.JLabel();
         statusAnimationLabel = new javax.swing.JLabel();
         progressBar = new javax.swing.JProgressBar();
+        buttonGroup1 = new javax.swing.ButtonGroup();
 
         mainPanel.setName("mainPanel"); // NOI18N
+
+        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(ezbank.Main.class).getContext().getResourceMap(MainView.class);
+        importLbl.setText(resourceMap.getString("importLbl.text")); // NOI18N
+        importLbl.setName("importLbl"); // NOI18N
+
+        importPathField.setText(resourceMap.getString("importPathField.text")); // NOI18N
+        importPathField.setToolTipText(resourceMap.getString("importPathField.toolTipText")); // NOI18N
+        importPathField.setName("importPathField"); // NOI18N
+
+        browseImportBtn.setText(resourceMap.getString("browseImportBtn.text")); // NOI18N
+        browseImportBtn.setName("browseImportBtn"); // NOI18N
+
+        downloadBtn.setText(resourceMap.getString("downloadBtn.text")); // NOI18N
+        downloadBtn.setName("downloadBtn"); // NOI18N
+
+        jScrollPane1.setName("jScrollPane1"); // NOI18N
+
+        idTextArea.setColumns(4);
+        idTextArea.setRows(5);
+        idTextArea.setName("idTextArea"); // NOI18N
+        jScrollPane1.setViewportView(idTextArea);
+
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+        dateTextArea.setColumns(10);
+        dateTextArea.setRows(5);
+        dateTextArea.setName("dateTextArea"); // NOI18N
+        jScrollPane2.setViewportView(dateTextArea);
+
+        jLabel2.setText(resourceMap.getString("jLabel2.text")); // NOI18N
+        jLabel2.setName("jLabel2"); // NOI18N
+
+        jScrollPane3.setName("jScrollPane3"); // NOI18N
+
+        descTextArea.setColumns(16);
+        descTextArea.setRows(5);
+        descTextArea.setName("descTextArea"); // NOI18N
+        jScrollPane3.setViewportView(descTextArea);
+
+        jLabel3.setText(resourceMap.getString("jLabel3.text")); // NOI18N
+        jLabel3.setName("jLabel3"); // NOI18N
+
+        jScrollPane5.setName("jScrollPane5"); // NOI18N
+
+        creditsTextArea.setColumns(6);
+        creditsTextArea.setRows(5);
+        creditsTextArea.setName("creditsTextArea"); // NOI18N
+        jScrollPane5.setViewportView(creditsTextArea);
+
+        jLabel5.setText(resourceMap.getString("jLabel5.text")); // NOI18N
+        jLabel5.setName("jLabel5"); // NOI18N
+
+        jScrollPane6.setName("jScrollPane6"); // NOI18N
+
+        debitsTextArea.setColumns(6);
+        debitsTextArea.setRows(5);
+        debitsTextArea.setName("debitsTextArea"); // NOI18N
+        jScrollPane6.setViewportView(debitsTextArea);
+
+        jLabel6.setText(resourceMap.getString("jLabel6.text")); // NOI18N
+        jLabel6.setName("jLabel6"); // NOI18N
+
+        searchField.setText(resourceMap.getString("searchField.text")); // NOI18N
+        searchField.setName("searchField"); // NOI18N
+
+        jLabel4.setText(resourceMap.getString("jLabel4.text")); // NOI18N
+        jLabel4.setName("jLabel4"); // NOI18N
+
+        seachBtn.setText(resourceMap.getString("seachBtn.text")); // NOI18N
+        seachBtn.setName("seachBtn"); // NOI18N
+
+        exportBtn.setText(resourceMap.getString("exportBtn.text")); // NOI18N
+        exportBtn.setName("exportBtn"); // NOI18N
+
+        textRadioOption.setText(resourceMap.getString("textRadioOption.text")); // NOI18N
+        textRadioOption.setName("textRadioOption"); // NOI18N
+
+        CSVRadioOption.setText(resourceMap.getString("CSVRadioOption.text")); // NOI18N
+        CSVRadioOption.setName("CSVRadioOption"); // NOI18N
 
         org.jdesktop.layout.GroupLayout mainPanelLayout = new org.jdesktop.layout.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 679, Short.MAX_VALUE)
+            .add(mainPanelLayout.createSequentialGroup()
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(285, 285, 285)
+                        .add(importLbl))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(144, 144, 144)
+                        .add(importPathField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 204, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(4, 4, 4)
+                        .add(browseImportBtn, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 42, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(downloadBtn)))
+                .addContainerGap())
+            .add(mainPanelLayout.createSequentialGroup()
+                .add(34, 34, 34)
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 56, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel1))
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(46, 46, 46)
+                        .add(jLabel2)))
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(67, 67, 67)
+                        .add(jLabel3)))
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(23, 23, 23)
+                        .add(jLabel6)))
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(10, 10, 10)
+                        .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(19, 19, 19)
+                        .add(jLabel5)))
+                .add(39, 39, 39))
+            .add(mainPanelLayout.createSequentialGroup()
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(54, 54, 54)
+                        .add(jLabel4)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 54, Short.MAX_VALUE))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(org.jdesktop.layout.GroupLayout.LEADING, seachBtn, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                            .add(searchField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                        .add(297, 297, 297)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(exportBtn)
+                    .add(textRadioOption)
+                    .add(CSVRadioOption))
+                .add(76, 76, 76))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 521, Short.MAX_VALUE)
+            .add(mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(importLbl)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(importPathField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(browseImportBtn)
+                    .add(downloadBtn))
+                .add(51, 51, 51)
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(jLabel4)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(searchField, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(seachBtn))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(CSVRadioOption)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(textRadioOption)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(exportBtn)))
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 88, Short.MAX_VALUE)
+                .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                        .add(mainPanelLayout.createSequentialGroup()
+                            .add(jLabel1)
+                            .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, mainPanelLayout.createSequentialGroup()
+                                .add(jLabel3)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(org.jdesktop.layout.GroupLayout.TRAILING, mainPanelLayout.createSequentialGroup()
+                                .add(jLabel2)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jScrollPane2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
+                    .add(mainPanelLayout.createSequentialGroup()
+                        .add(mainPanelLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabel6)
+                            .add(jLabel5))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 196, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))))
         );
 
         menuBar.setName("menuBar"); // NOI18N
 
-        org.jdesktop.application.ResourceMap resourceMap = org.jdesktop.application.Application.getInstance(ezbank.Main.class).getContext().getResourceMap(MainView.class);
         fileMenu.setText(resourceMap.getString("fileMenu.text")); // NOI18N
         fileMenu.setName("fileMenu"); // NOI18N
 
@@ -190,12 +405,38 @@ public class MainView extends FrameView {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton CSVRadioOption;
+    private javax.swing.JButton browseImportBtn;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JTextArea creditsTextArea;
+    private javax.swing.JTextArea dateTextArea;
+    private javax.swing.JTextArea debitsTextArea;
+    private javax.swing.JTextArea descTextArea;
+    private javax.swing.JButton downloadBtn;
+    private javax.swing.JButton exportBtn;
+    private javax.swing.JTextArea idTextArea;
+    private javax.swing.JLabel importLbl;
+    private javax.swing.JTextField importPathField;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JProgressBar progressBar;
+    private javax.swing.JButton seachBtn;
+    private javax.swing.JTextField searchField;
     private javax.swing.JLabel statusAnimationLabel;
     private javax.swing.JLabel statusMessageLabel;
     private javax.swing.JPanel statusPanel;
+    private javax.swing.JRadioButton textRadioOption;
     // End of variables declaration//GEN-END:variables
 
     private final Timer messageTimer;
